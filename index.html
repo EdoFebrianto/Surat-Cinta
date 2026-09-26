@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Senorita ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            font-family: "Poppins", sans-serif;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255, 100, 150, 0.20),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(255, 180, 200, 0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #160912,
+                    #35111f,
+                    #10070d
+                );
+        }
+
+
+        /* =========================
+           HALAMAN DEPAN
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .small-title {
+            font-size: 11px;
+
+            letter-spacing: 5px;
+
+            color: #e7a6b7;
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(50px, 9vw, 90px);
+
+            font-weight: 600;
+
+            line-height: 1;
+
+            margin-bottom: 18px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #ffc5d5,
+                    #ffffff
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .subtitle {
+            font-size: 14px;
+
+            font-weight: 300;
+
+            color: #d7b8c2;
+
+            margin-bottom: 55px;
+        }
+
+
+        /* =========================
+           AMplOP
+        ========================= */
+
+        .envelope-container {
+            cursor: pointer;
+
+            text-align: center;
+
+            user-select: none;
+        }
+
+
+        .envelope {
+            width: 330px;
+            height: 220px;
+
+            position: relative;
+
+            filter:
+                drop-shadow(
+                    0 25px 35px rgba(0,0,0,0.5)
+                );
+
+            transition:
+                transform 0.4s ease;
+        }
+
+
+        .envelope-container:hover .envelope {
+            transform:
+                translateY(-8px)
+                scale(1.03);
+        }
+
+
+        /* badan amplop */
+
+        .envelope-body {
+            position: absolute;
+
+            inset: 0;
+
+            background: #8f3049;
+
+            border-radius: 5px;
+
+            overflow: hidden;
+        }
+
+
+        /* surat kecil di dalam */
+
+        .inside-letter {
+            position: absolute;
+
+            width: 85%;
+            height: 90%;
+
+            left: 7.5%;
+            top: 5%;
+
+            background: #fffaf0;
+
+            color: #522732;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 22px;
+
+            transition:
+                transform 0.9s ease;
+        }
+
+
+        /* bagian depan */
+
+        .envelope-front {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 65%;
+
+            background: #a83c57;
+
+            clip-path:
+                polygon(
+                    0 0,
+                    50% 60%,
+                    100% 0,
+                    100% 100%,
+                    0 100%
+                );
+
+            z-index: 4;
+        }
+
+
+        /* penutup atas */
+
+        .envelope-flap {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 65%;
+
+            background: #be4b66;
+
+            clip-path:
+                polygon(
+                    0 0,
+                    100% 0,
+                    50% 100%
+                );
+
+            transform-origin: top;
+
+            z-index: 5;
+
+            transition:
+                transform 0.8s ease;
+        }
+
+
+        /* love */
+
+        .seal {
+            position: absolute;
+
+            left: 50%;
+            top: 55%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            background: #f9d5df;
+
+            color: #8e3049;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 23px;
+
+            z-index: 7;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.3);
+
+            transition: 0.4s;
+        }
+
+
+        .click-here {
+            margin-top: 25px;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            color: #cfaab5;
+
+            animation:
+                blink 2s infinite;
+        }
+
+
+        @keyframes blink {
+
+            0%, 100% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+        /* =========================
+           AMplOP TERBUKA
+        ========================= */
+
+        .envelope.open .envelope-flap {
+
+            transform:
+                rotateX(180deg);
+
+            z-index: 1;
+        }
+
+
+        .envelope.open .inside-letter {
+
+            transform:
+                translateY(-115px);
+
+            z-index: 3;
+        }
+
+
+        .envelope.open .seal {
+
+            opacity: 0;
+
+            transform:
+                translate(-50%, -50%)
+                scale(0.4);
+        }
+
+
+        /* =========================
+           SURAT FULLSCREEN
+        ========================= */
+
+        .letter-screen {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 100;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            background:
+                rgba(10, 3, 8, 0.86);
+
+            backdrop-filter:
+                blur(12px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity 0.5s ease;
+        }
+
+
+        .letter-screen.active {
+
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        /* =========================
+           KERTAS
+        ========================= */
+
+        .paper {
+
+            width: 700px;
+
+            max-width: 100%;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            position: relative;
+
+            padding:
+                65px 70px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fffdf7,
+                    #fff5e8
+                );
+
+            color: #43242c;
+
+            box-shadow:
+                0 30px 90px rgba(0,0,0,0.6);
+
+            transform:
+                translateY(60px)
+                rotate(-2deg)
+                scale(0.85);
+
+            transition:
+                transform 0.7s
+                cubic-bezier(.17,.67,.3,1.3);
+        }
+
+
+        .letter-screen.active .paper {
+
+            transform:
+                translateY(0)
+                rotate(0)
+                scale(1);
+        }
+
+
+        /* dekorasi kertas */
+
+        .paper::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 35px;
+            bottom: 35px;
+
+            left: 30px;
+            right: 30px;
+
+            border-top:
+                1px solid rgba(120,70,80,0.08);
+
+            border-bottom:
+                1px solid rgba(120,70,80,0.08);
+
+            pointer-events: none;
+        }
+
+
+        /* tombol tutup */
+
+        .close {
+
+            position: absolute;
+
+            right: 18px;
+            top: 15px;
+
+            width: 40px;
+            height: 40px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(100,40,60,0.08);
+
+            color: #713342;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+            z-index: 5;
+
+            transition: 0.3s;
+        }
+
+
+        .close:hover {
+
+            background: #713342;
+
+            color: white;
+
+            transform: rotate(90deg);
+        }
+
+
+        /* =========================
+           ISI SURAT
+        ========================= */
+
+        .letter-content {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .date {
+
+            font-size: 12px;
+
+            color: #9a6875;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .letter-content h2 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 43px;
+
+            color: #6c293c;
+
+            margin-bottom: 25px;
+        }
+
+
+        .letter-content p {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            margin-bottom: 18px;
+        }
+
+
+        .important {
+
+            text-align: center;
+
+            font-size: 29px !important;
+
+            font-weight: 600;
+
+            color: #9a2d4b;
+
+            margin:
+                35px 0 !important;
+        }
+
+
+        .ending {
+
+            text-align: center;
+
+            font-size: 27px !important;
+
+            font-weight: 600;
+
+            color: #8d2d48;
+
+            margin-top: 35px !important;
+        }
+
+
+        .signature {
+
+            text-align: right;
+
+            margin-top: 45px !important;
+
+            color: #79535d;
+        }
+
+
+        .signature span {
+
+            color: #8d3048;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           HATI TERBANG
+        ========================= */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            color: #ff9db7;
+
+            animation:
+                fly linear forwards;
+        }
+
+
+        @keyframes fly {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    translateX(0)
+                    scale(0.5)
+                    rotate(0);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.8;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    translateX(var(--x))
+                    scale(1.3)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           RESPONSIVE HP
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 25px 15px;
+            }
+
+
+            h1 {
+                font-size: 53px;
+            }
+
+
+            .subtitle {
+                font-size: 13px;
+
+                margin-bottom: 45px;
+            }
+
+
+            .envelope {
+                width: 290px;
+                height: 195px;
+            }
+
+
+            .inside-letter {
+                font-size: 19px;
+            }
+
+
+            .paper {
+
+                padding:
+                    55px 28px 45px;
+
+                max-height: 88vh;
+            }
+
+
+            .paper::before {
+
+                left: 18px;
+                right: 18px;
+            }
+
+
+            .letter-content h2 {
+
+                font-size: 35px;
+            }
+
+
+            .letter-content p {
+
+                font-size: 18px;
+
+                line-height: 1.65;
+            }
+
+
+            .important {
+
+                font-size: 25px !important;
+            }
+
+
+            .ending {
+
+                font-size: 24px !important;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HALAMAN DEPAN
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="small-title">
+            SEBUAH SURAT UNTUKMU
+        </div>
+
+        <h1>
+            Untuk Senorita-ku
+        </h1>
+
+        <p class="subtitle">
+            Ada sesuatu yang ingin aku sampaikan...
+        </p>
+
+
+        <!-- AMplOP -->
+
+        <div
+            class="envelope-container"
+            id="envelopeButton"
+        >
+
+            <div
+                class="envelope"
+                id="envelope"
+            >
+
+                <div class="envelope-body"></div>
+
+
+                <div class="inside-letter">
+
+                    Untukmu,
+                    Senorita ❤️
+
+                </div>
+
+
+                <div class="envelope-front"></div>
+
+
+                <div class="envelope-flap"></div>
+
+
+                <div class="seal">
+                    ♥
+                </div>
+
+            </div>
+
+
+            <div class="click-here">
+                KLIK SURAT INI
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         SURAT
+    ========================= -->
+
+    <div
+        class="letter-screen"
+        id="letterScreen"
+    >
+
+        <div class="paper">
+
+
+            <button
+                class="close"
+                id="closeButton"
+            >
+                ×
+            </button>
+
+
+            <div class="letter-content">
+
+
+                <div class="date">
+                    Untuk seseorang yang sangat berarti...
+                </div>
+
+
+                <h2>
+                    Senorita-ku,
+                </h2>
+
+
+                <p>
+
+                    Aku sebenarnya tidak pernah tahu
+                    bagaimana cara yang paling tepat untuk
+                    menjelaskan rasa syukurku karena telah
+                    dipertemukan denganmu.
+
+                </p>
+
+
+                <p>
+
+                    Tapi kalau aku harus memilih satu kata,
+                    mungkin kata itu adalah
+
+                    <strong>“beruntung”.</strong>
+
+                </p>
+
+
+                <p>
+
+                    Aku beruntung bisa mengenal seseorang
+                    sepertimu. Seseorang yang kehadirannya
+                    mampu membuat hari-hari biasa terasa
+                    menjadi lebih istimewa.
+
+                </p>
+
+
+                <p>
+
+                    Terima kasih karena sudah hadir dalam
+                    hidupku. Terima kasih untuk setiap
+                    perhatian kecil, setiap cerita, setiap
+                    tawa, bahkan setiap momen sederhana
+                    yang kita lewati bersama.
+
+                </p>
+
+
+                <p>
+
+                    Mungkin aku tidak selalu pandai
+                    menunjukkan apa yang aku rasakan.
+                    Mungkin terkadang kata-kataku juga
+                    tidak cukup untuk menggambarkannya.
+
+                    Tapi percayalah...
+
+                </p>
+
+
+                <p class="important">
+
+                    Aku sangat bersyukur memilikimu. ❤️
+
+                </p>
+
+
+                <p>
+
+                    Bagiku, kamu bukan hanya seseorang
+                    yang aku sayangi.
+
+                    Kamu adalah seseorang yang membuatku
+                    ingin menjadi versi terbaik dari diriku
+                    sendiri.
+
+                </p>
+
+
+                <p>
+
+                    Kalau suatu hari nanti kamu bertanya,
+
+                    <em>
+                        “Kenapa kamu memilih aku?”
+                    </em>
+
+                </p>
+
+
+                <p>
+
+                    Mungkin jawabanku sederhana.
+
+                    Karena dari sekian banyak orang di dunia
+                    ini, hatiku merasa paling nyaman ketika
+                    bersamamu.
+
+                </p>
+
+
+                <p>
+
+                    Aku tidak tahu apa yang akan terjadi
+                    di masa depan.
+
+                    Tapi untuk hari ini, aku hanya ingin
+                    mengatakan satu hal:
+
+                </p>
+
+
+                <p class="ending">
+
+                    Terima kasih sudah menjadi
+                    Senorita-ku. ❤️
+
+                </p>
+
+
+                <p class="signature">
+
+                    Dengan penuh rasa syukur,<br>
+
+                    <span>
+                        aku yang menyayangimu.
+                    </span>
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const envelopeButton =
+            document.getElementById("envelopeButton");
+
+        const envelope =
+            document.getElementById("envelope");
+
+        const letterScreen =
+            document.getElementById("letterScreen");
+
+        const closeButton =
+            document.getElementById("closeButton");
+
+
+        /* =========================
+           BUKA SURAT
+        ========================= */
+
+        envelopeButton.addEventListener(
+            "click",
+            function () {
+
+                envelope.classList.add("open");
+
+
+                setTimeout(
+                    function () {
+
+                        letterScreen.classList.add("active");
+
+                    },
+                    700
+                );
+
+            }
+        );
+
+
+        /* =========================
+           TUTUP SURAT
+        ========================= */
+
+        function closeLetter() {
+
+            letterScreen.classList.remove("active");
+
+
+            setTimeout(
+                function () {
+
+                    envelope.classList.remove("open");
+
+                },
+                500
+            );
+        }
+
+
+        closeButton.addEventListener(
+            "click",
+            closeLetter
+        );
+
+
+        /* =========================
+           KLIK LUAR KERTAS
+        ========================= */
+
+        letterScreen.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === letterScreen
+                ) {
+
+                    closeLetter();
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           TOMBOL ESC
+        ========================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeLetter();
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           HATI TERBANG
+        ========================= */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.className =
+                "floating-heart";
+
+
+            const symbols = [
+                "♥",
+                "♡",
+                "❤",
+                "✦",
+                "✧"
+            ];
+
+
+            heart.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.fontSize =
+                (Math.random() * 12 + 10)
+                + "px";
+
+
+            heart.style.animationDuration =
+                (Math.random() * 6 + 7)
+                + "s";
+
+
+            heart.style.setProperty(
+                "--x",
+                (Math.random() * 160 - 80)
+                + "px"
+            );
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                function () {
+
+                    heart.remove();
+
+                },
+                14000
+            );
+
+        }
+
+
+        /* Buat hati setiap 900ms */
+
+        setInterval(
+            createHeart,
+            900
+        );
+
+
+        /* Hati awal */
+
+        for (
+            let i = 0;
+            i < 8;
+            i++
+        ) {
+
+            setTimeout(
+                createHeart,
+                i * 400
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
